@@ -47,7 +47,6 @@ public class PaymentServlet extends HttpServlet {
 
             String name = json.get("name").toString();
             String email = json.get("email").toString();
-            System.out.println("name: " + name + "email: " + email);
             acc.setName(name);
             acc.setEmail(email);
             int id = PsqlStore.instOf().addAcc(acc);
